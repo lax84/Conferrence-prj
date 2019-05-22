@@ -1,0 +1,37 @@
+<h1>Login</h1>
+<hr>
+<div class="col-md-4">
+  <form ngNativeValidate novalidate #formObject="ngForm" (ngSubmit)="loginFormHandler(formObject.value)" autocomplete="off">
+    <div class="form-group" >
+      
+      <label for="userName">User Name:</label>
+      <input id="userName" required (ngModel)="userName" name="userName" type="text" class="form-control" placeholder="User Name..." />&nbsp;
+      <em *ngIf="(formObject.controls.userName?.invalid && formObject.controls.userName?.touched) || (mouseOverLogin && formObject.controls.userName.invalid)">Required</em>
+    </div>
+    <div class="form-group" >
+      
+      <label for="password">Password:</label>
+      <input id="password" required (ngModel)="password" name="password" type="password" class="form-control"placeholder="Password..." />&nbsp;
+      <em *ngIf="(formObject.controls.password?.invalid && formObject.controls.password?.touched) || (mouseOverLogin && formObject.controls.password.invalid)">Required</em>
+    </div>
+    
+    <span (mouseenter)="mouseOverLogin=true" (mouseleave)="mouseOverLogin=false">
+      <button type="submit" [disabled]="formObject.invalid" class="btn btn-primary">Login</button>&nbsp;
+    </span>
+    <button (click)="cancel()" type="button" class="btn btn-default">Cancel</button>
+  </form>
+</div><br/>
+
+<!--  
+form.valid : {{formObject.valid}}<br/>
+form.invalid : {{formObject.invalid}}<br/>
+form.controler.userName.valid: {{formObject.controls.userName.valid}}<br/>
+form.controler.userName.invalid: {{formObject.controls.userName.invalid}}<br/>
+form.controler.userName.touched: {{formObject.controls.userName.touched}}<br/>
+form.controler.userName.untouched: {{formObject.controls.userName.untouched}}<br/><br/>
+
+form.controler.password.valid: {{formObject.controls.password.valid}}<br/>
+form.controler.password.invalid: {{formObject.controls.password.invalid}}<br/>
+form.controler.password.touched: {{formObject.controls.password.touched}}<br/>
+form.controler.password.untouched: {{formObject.controls.password.untouched}}
+-->
