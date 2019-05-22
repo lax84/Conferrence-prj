@@ -1,0 +1,18 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<!-- This xml is called Web Container used to configure the Web App.
+
+
+This is also used to Container for Deploying Servlets. Special JVM tomcat server.
+
+Servlet Dynamic Web componenet and acts a controller used to HTTP Request and HTTP Response.
+
+Servlets Life Cycle methods - init, service and destroy.
+
+MVC Design pattern (M-Model, V-View and C-Controller)
+
+Spring Web MVC - Default Servlet Dispatcher Servlet(init service - doGet(),doPost() and destroy() -->
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+</web-app>

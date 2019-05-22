@@ -1,0 +1,70 @@
+JPA - Java Persistance API (ORM tool)
+
+Java - Our classes
+Persistence - Storage of Objects
+API - Library
+
+The fields are ROWS and Objects are the COLUMNS.
+
+The Java classes that are marked with @Entity can be used as Persistent Object in the Hibernate.
+
+The default file name will be Hibernate_cfg file
+
+The word Transient in Java is used before the Persistent process. Before saving the Session in Hibernate.
+
+ 06/05/2019
+ 
+ -- Spring Web MVC Integration with Hibernate --
+ 
+ 1. Dependencies:
+ 
+ 	(a) Spring ORM (Spring Library, exclusively used to link with Hibernate tools)
+ 	(b) Hibernate
+ 
+ 2. Configuration class (Spring Web Configuration file)
+ 
+	 (a) Data source
+	 (b) Local Session Factory
+	 (c) Hibernate Transaction Manager (will take part in managing the transactions).
+	 
+-----------------------------------------------------------------------------------------------------------------------
+
+Spring JPA - Java persistance API
+
+1. Converting an existing Spring MVC application to Spring Boot
+2. Dependency (jar) for stand alone application
+3. Project facet changes
+4. Wiring the Spring Boot Main configuration class 
+
+
+JPA uses CGLIB - Code Generation Library
+
+This will generated at the runtime.
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Security:-
+
+Endpoints:
+
+Roles - {Admin, User}
+
+/searchlocation/{countryName} - User
+
+/updatelocation{locationId}/{cityName} - Admin
+
+/Welcome - anonymous
+
+
+
+Configuration step involved in the EventManagementSecurity class for Security.
+
+1. We need to override the configure() methods
+2. Setting Creating Roles and Usernames and Password using AuthenticationManagerBuilder 
+3. Pattern based restriction for endpoints via MVC Matcher ../root/**
+4. Mapping those endpoints to specific Roles
+5. Deciding whether to choose inMemory auth. or Database Auth. or JWT Auth. (Web Tokens)
+6. Password encryptions (with and without)
+7. Disable CSRF (Cross Site Request Forgery)
+8. Access Denied Exception handling
+
